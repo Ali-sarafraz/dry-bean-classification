@@ -8,7 +8,7 @@ This project focuses on classifying dry bean types based on features provided in
 - `EDA.ipynb`: Jupyter notebook for exploratory data analysis, including data visualization and preprocessing steps.
 - `modeling.ipynb`: Jupyter notebook for training and evaluating machine learning models (SVM, Random Forest, and XGBoost).
 - `requirements.txt`: List of Python dependencies required to run the project.
-- `xgboost_model.joblib`: Saved XGBoost model, which outperformed SVM and Random Forest in evaluation.
+- `SVM_model.joblib`: Saved SVM model, which outperformed SVM and Random Forest in evaluation.
 
 ## Methodology
 1. **Exploratory Data Analysis (EDA)**:
@@ -24,8 +24,8 @@ This project focuses on classifying dry bean types based on features provided in
    - Model performance was compared based on standard metrics (e.g., accuracy, precision, recall, F1-score).
 
 3. **Model Selection**:
-   - XGBoost was selected as the final model due to its superior performance.
-   - The trained XGBoost model is saved as `xgboost_model.joblib` for reproducibility and deployment.
+   - SVM was selected as the final model due to its superior performance.
+   - The trained SVM model is saved as `SVM_model.joblib` for reproducibility and deployment.
 
 ## Installation
 1. Clone the repository:
@@ -53,10 +53,10 @@ This project focuses on classifying dry bean types based on features provided in
    - The notebook includes code to load the dataset, preprocess data, train models, and evaluate results.
 
 3. **Use the Pre-trained Model**:
-   - Load the saved XGBoost model (`xgboost_model.joblib`) using the `joblib` library for predictions:
+   - Load the saved SVM model (`SVM_model.joblib`) using the `joblib` library for predictions:
      ```python
      import joblib
-     model = joblib.load('xgboost_model.joblib')
+     model = joblib.load('SVM_model.joblib')
      # Use model for predictions
      ```
 
@@ -75,13 +75,13 @@ pip install -r requirements.txt
 ```
 
 ## Results
-- The XGBoost model outperformed SVM and Random Forest in terms of classification performance.
+- The SVM model outperformed XGBoost and Random Forest in terms of classification performance.
 - Detailed results, including metrics and comparisons, are available in `modeling.ipynb`.
 
 ## Future Work
 - Explore additional feature engineering techniques to further improve model performance.
 - Test other advanced algorithms (e.g., neural networks) for comparison.
-- Deploy the XGBoost model in a production environment for real-time predictions.
+- Deploy the SVM model in a production environment for real-time predictions.
 
 ## Contact
-For questions or contributions, please contact [Your Name] at [Your Email].
+For questions or contributions, please contact [Ali] at [ali.sarafraz530@gmail.com].
