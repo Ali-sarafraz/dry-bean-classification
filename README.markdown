@@ -8,7 +8,7 @@ This project focuses on classifying dry bean types based on features provided in
 - `EDA.ipynb`: Jupyter notebook for exploratory data analysis, including data visualization and preprocessing steps.
 - `modeling.ipynb`: Jupyter notebook for training and evaluating machine learning models (SVM, Random Forest, and XGBoost).
 - `requirements.txt`: List of Python dependencies required to run the project.
-- `SVM_model.joblib`: Saved SVM model, which outperformed SVM and Random Forest in evaluation.
+- `RandomForest_model.joblib`: Saved Random Forest model, which outperformed SVM and XGBoost in evaluation.
 
 ## Methodology
 1. **Exploratory Data Analysis (EDA)**:
@@ -18,14 +18,13 @@ This project focuses on classifying dry bean types based on features provided in
 2. **Modeling**:
    - Implemented in `modeling.ipynb`.
    - Three machine learning models were trained and evaluated:
-     - **Support Vector Machine (SVM)**: Baseline model for classification.
-     - **Random Forest**: Ensemble model for improved performance.
-     - **XGBoost**: Gradient boosting model, which achieved the best performance.
-   - Model performance was compared based on standard metrics (e.g., accuracy, precision, recall, F1-score).
+     - **Support Vector Machine (SVM)**: Baseline classification model with the highest cross-validation mean accuracy, but slightly weaker test-set performance.
+     - **Random Forest**: Ensemble model that delivered the best overall test-set performance (Accuracy, Precision, Recall, F1).
+     - **XGBoost**: Gradient boosting model with strong, consistent results and the highest AUC, performing very close to Random Forest.
 
 3. **Model Selection**:
-   - SVM was selected as the final model due to its superior performance.
-   - The trained SVM model is saved as `SVM_model.joblib` for reproducibility and deployment.
+   - Random forest was selected as the final model due to its superior performance.
+   - The trained Random forest model is saved as `RandomForest_model.joblib` for reproducibility and deployment.
 
 ## Installation
 1. Clone the repository:
@@ -53,10 +52,10 @@ This project focuses on classifying dry bean types based on features provided in
    - The notebook includes code to load the dataset, preprocess data, train models, and evaluate results.
 
 3. **Use the Pre-trained Model**:
-   - Load the saved SVM model (`SVM_model.joblib`) using the `joblib` library for predictions:
+   - Load the saved Random Forest model (`RandomForest_model.joblib`) using the `joblib` library for predictions:
      ```python
      import joblib
-     model = joblib.load('SVM_model.joblib')
+     model = joblib.load('RandomForest_model.joblib')
      # Use model for predictions
      ```
 
@@ -81,7 +80,7 @@ pip install -r requirements.txt
 ## Future Work
 - Explore additional feature engineering techniques to further improve model performance.
 - Test other advanced algorithms (e.g., neural networks) for comparison.
-- Deploy the SVM model in a production environment for real-time predictions.
+- Deploy the Random Forest model in a production environment for real-time predictions.
 
 ## Contact
 For questions or contributions, please contact [Ali] at [ali.sarafraz530@gmail.com].
